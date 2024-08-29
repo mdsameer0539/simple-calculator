@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="input_a" id="label_a">A: </label>
+    <input type="text" id="input_a">
+    <label for="input_b" id="label_b">b: </label>
+    <input type="text" id="input_b">
+    <br><br>
+    <select name="select_option" id="operation">
+        <option value="add">ADD</option>
+        <option value="sub">sub</option>
+        <option value="mul">mul</option>
+        <option value="div">div</option>
+        <option value="mod">mod</option>
+        <option value="pow">pow</option>
+    </select>
+    <br><br>
+    <input type="button" value="Submit" id="button1">
+    <br><br>
+    <h2 id="result"></h2>
+    <script>
+        document.getElementById("button1").addEventListener("click",()=>{
+            var a = document.getElementById("input_a").value;
+            var b = document.getElementById("input_b").value;
+            var op = document.getElementById("operation").value;
+            switch(op){
+                case "add":
+                    console.log(a+b);
+                    break;
+                case "sub":
+                    console.log(a-b);
+                    break;
+                case "mul":
+                    console.log(a*b);
+                    break;
+                case "add":
+                    console.log(a/b);
+                    break;
+                case "mod":
+                    console.log(a%b);
+                    break;
+                case "pow":
+                    console.log(a**b);
+                    break;
+                default :
+                    result.innerHtml="Enter correct values"
+            }
+        })
+    </script>
+</body>
+</html>
